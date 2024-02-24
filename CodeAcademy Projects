@@ -1,4 +1,4 @@
-#Welcome! this is the first project from my Codeacademy projects. --- Simple Shipping cost calculator
+#Welcome! this is the first mini project from my Codeacademy projects. --- Simple Shipping cost calculator
 weight = 9
 # Ground Shipping
 if weight <= 2:
@@ -25,7 +25,7 @@ else:
   dship_cost = weight * 14.25
 print('Here is the cost for Drone Shipping:' ,dship_cost)
 
-#This is the second project! --- Simple Magic 8-Ball
+#This is the second mini project! --- Simple Magic 8-Ball
 name = 'Chase'
 question = 'Will I graduate college?'
 answer = ''
@@ -54,3 +54,23 @@ else:
   answer = 'Error'
 print(name, 'asks:', question)
 print("Magic 8-Ball's answer:", answer)
+
+#3rd mini Project:
+toppings = ['pepperoni', 'pineapple', 'cheese', 'sausage', 'olives', 'anchovies', 'mushrooms']
+prices = ['2', '6', '1', '3', '2', '7', '2']
+num_two_dollar_slices = prices.count('2')
+print(num_two_dollar_slices)
+num_pizzas = len(toppings)
+print('We sell', num_pizzas, 'different kinds of pizza!')
+pizza_and_prices = [[2, 'pepperoni'], [6, 'pineapple'], [1, 'cheese'], [3, 'sausage'], [2, 'olives'], [7, 'anchovies'], [2, 'mushrooms']]
+print(pizza_and_prices)
+pizza_and_prices.sort()
+cheapest_pizza = pizza_and_prices[0]
+priciest_pizza = pizza_and_prices[-1]
+pizza_and_prices.pop()
+print(pizza_and_prices)
+peppers = [2.5, 'peppers']
+pizza_and_prices.insert(4, peppers)
+print(pizza_and_prices)
+three_cheapest = pizza_and_prices[:3]
+print(three_cheapest)
