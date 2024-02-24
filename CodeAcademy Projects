@@ -1,1 +1,25 @@
-
+weight = 9
+# Ground Shipping
+if weight <= 2:
+  shipping_cost = weight * 1.50 + 20
+elif 2 < weight <= 6:
+  shipping_cost = weight * 3.00 + 20
+elif 6 < weight <= 10:
+  shipping_cost = weight * 4.00 + 20
+else:
+  weight > 10
+  shipping_cost = weight * 4.75 + 20
+print('Here is your price for Ground Shipping:', shipping_cost)
+Ground_shipping_prem = 125
+print('Cost of ground shipping premium = $125')
+#Drone shipping
+if weight <= 2:
+  dship_cost = weight * 4.50
+elif 2 < weight <= 6:
+  dship_cost = weight * 9.00
+elif 6 < weight <= 10:
+  dship_cost = weight * 12.00
+else:
+  weight > 10
+  dship_cost = weight * 14.25
+print('Here is the cost for Drone Shipping:' ,dship_cost)
