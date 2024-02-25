@@ -1,0 +1,114 @@
+#Here is some school projects/homeworks!!
+#1 Rock, Paper, Scissors
+import random
+
+while True:
+
+  Options = ["Rock", "Paper", "Scissors"]
+  AI = random.choice(Options)
+
+  print("Choose your option between Rock, Paper, and Scissors!!")
+
+  print("Player, please choose now:")
+  Player = input()
+
+  print("AI may now choose randomly:", AI)
+
+  if Player == AI:
+    print("This round is a tie!!")
+  elif Player == "Scissors" and AI == "Paper":
+    print("Player wins this round!!!")
+  elif Player == "Paper" and AI == "Rock":
+    print("Player wins the round!!")
+  elif Player == "Rock" and AI == "Scissors":
+    print("Player wins this round!")
+  elif Player == "Rock" and AI == "Paper":
+   print("AI wins the round!!!")
+  elif Player == "Paper" and AI == "Scissors":
+    print("AI wins this round!!")
+  elif Player == "Scissors" and AI == "Rock":
+   print("AI wins the round!!!")
+
+  else:
+   print("Invalid input, please try again!")
+
+  Player_input = input("Would you like to play again? enter yes or no:")
+  if Player_input != "yes":
+    break
+
+#2 Factorial Calculator
+x = int(input("Input the number you wish to recieve the factorial of : "))
+
+z = 1
+
+while x > 0:
+    z = z * x
+    x = x - 1
+
+print('Here is the calculated factorial as you wish:', z)
+
+#3 
+import math
+
+x = int(input("please input the value of x : "))
+iter = int(input("Input your preffered stopping point of iterations : "))
+
+def DIY(iter, x):
+  Cosine = 0
+  for _ in range(iter):
+      multi = (-1)**_
+      top = x**(2*_)
+      bottom = math.factorial(2*_)
+      Cosine = Cosine + multi * (top/bottom)
+  return Cosine
+
+DIYanswer = DIY(iter, x)
+
+python = math.cos(x)
+
+print("Here is the value of my DIY Cosine :", DIYanswer)
+print("Here is the value of python's built-in function :", python)
+
+#4 
+import math
+
+while True:
+
+  x = int(input("Input your desired value of x : "))
+  iter = int(input("Please input your preferred iterations for the stopping point : "))
+
+  def f(z):   
+    if z == 0:
+        return 1
+    else:
+      return z * f(z-1)
+  
+  def MyExpfunc(iter, x):
+    exp = 0
+    for _ in range(iter):
+     exp = exp + x**_ / f(_)
+    return exp
+
+  def main():
+    DIYexp = MyExpfunc(iter, x)
+    pythonexp = math.exp(x)
+    print("The value of my DIY function is {},compared to the value of python's function {}".format(DIYexp, pythonexp))
+
+
+  main()
+
+  user_input = input("Would you like to run the program again? please enter yes or no:")
+  if user_input != "yes":
+    break
+
+#5 
+CustomList = int(input("Enter the number of elements you'd like in the list: "))
+list=[]
+
+for i in range(CustomList):
+  enterelem = (int(input("Input each element into the list: ")))
+  list.append(enterelem)
+  i = i + 1
+
+for i in range(CustomList):
+  print("The position of the element is:{} while the value stored is:{}" .format(i, list[i]))
